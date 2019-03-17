@@ -64,10 +64,36 @@ class List extends Component {
 
 
 const AppNavigator = createStackNavigator({
-    list: List,
-    get: Get,
-    edit: EditForm,
-    add: AddForm,
+    list: {
+        screen:List,
+        navigationOptions:()=>({
+            title: "HOME",
+            headerBackTitle:null
+        })
+    },
+    get: {
+        screen:Get,
+        navigationOptions:()=>({
+            title: "GET"
+        })
+
+    },
+    edit:{
+        screen:EditForm,
+        navigationOptions:()=>({
+            title: "EDIT"
+        })
+
+    },
+    add: {
+        screen:AddForm,
+        navigationOptions:()=>({
+            title: "ADD"
+        })
+
+    }
+
+
 
 });
 
